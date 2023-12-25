@@ -1,0 +1,31 @@
+﻿@model ImageUpdateVm
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+        </div>
+        <div class="card-body">
+            <form asp-action="Update" method="post">
+                <div>
+                    <label asp-for="ImageUrl"></label>
+                    <br />
+                    <input asp-for="ImageUrl" class="form-control">
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                </div>
+                <br />  
+                <button class="btn btn-outline-info">Update</button>
+                <a class="btn btn-danger" asp-action="Cancel">Cancel</a>
+            </form>
+        </div>
+    </div>
+
+</div>
